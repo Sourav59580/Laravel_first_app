@@ -13,18 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $data = array(
-        "Name" =>"Sourav Santra",
-        "rollNo" => "7585069971"
-    );
-    return view('index',$data);
-});
+Route::get('/','index@route');
 
-Route::get('/test',function(){
-   return view('testing');
-});
-
-Route::get('/about',function(){
-    return view('about');
-});
+Route::get("/about/{user_id}",'about_us@route');

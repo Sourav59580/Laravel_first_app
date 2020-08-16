@@ -1,6 +1,12 @@
-@extends("default")
-@section("mywebpage")
+@extends("body.default")
 
-<h2>About us</h2>
+@section("my-title")
 
+about
+@endsection
+
+
+@section("my-content")
+
+<h4> {{ $userId }}</h4>
 @endsection
