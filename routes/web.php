@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','index@route');
-
-Route::get("/about/{user_id}",'about_us@route');
+Route::get('/',function(){
+    return view('index');
+});
