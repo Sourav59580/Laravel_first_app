@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWapTable extends Migration
+class CreateWapsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateWapTable extends Migration
      */
     public function up()
     {
-        Schema::create('wap', function (Blueprint $table) {
+        Schema::create('waps', function (Blueprint $table) {
             $table->id();
+            $table->timestamps();
             $table->string('name');
-            $table->integer('class');
             $table->integer('roll');
+            $table->integer('class');
         });
     }
 
@@ -28,6 +29,6 @@ class CreateWapTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('wap');
+        Schema::dropIfExists('waps');
     }
 }

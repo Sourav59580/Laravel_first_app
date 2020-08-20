@@ -9,7 +9,7 @@ Home
    
    <div class="container p-4">
 
-   <form>
+   <form method="POST" action="store-data">
    @csrf
    <input type="text" name="name" class="form-control w-50 mb-4" placeholder="Enter your name">
 
